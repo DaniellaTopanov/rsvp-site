@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>תודה!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("/static/Pink%20Cute%20Girly%20Birthday%20Invitation.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #ffe6f0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .thank-you-box {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #d94f70;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-box">
+        <h1>תודה, {{ name }}!</h1>
+        <p>
+            {% if attending == "כן" %}
+                קיבלנו את האישור שלך. מחכים לך! 💗
+            {% else %}
+                קיבלנו את האישור שלך. נבין אותך, מקווים לראותך בשמחות הבאות 💗
+            {% endif %}
+        </p>
+    </div>
+</body>
+</html>

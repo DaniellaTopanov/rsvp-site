@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>רשימת אישורי הגעה</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            padding: 40px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #d94f70;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #d94f70;
+        }
+    </style>
+</head>
+<body>
+    <h2>רשימת אישורי הגעה</h2>
+    <table>
+        <tr>
+            <th>שם</th>
+            <th>מגיע/ה?</th>
+        </tr>
+        {% for name, attending in data %}
+        <tr>
+            <td>{{ name }}</td>
+            <td>{{ attending }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
